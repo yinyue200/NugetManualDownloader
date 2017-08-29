@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetManualDownloader", "NugetManualDownloader\NugetManualDownloader.csproj", "{AD8188D5-5731-40D5-B580-D3C17F29215C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetManualDownloader", "NugetManualDownloader\NugetManualDownloader.csproj", "{706ACFE5-C40C-4ED3-82DC-4FB0F7A47D1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD8188D5-5731-40D5-B580-D3C17F29215C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD8188D5-5731-40D5-B580-D3C17F29215C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD8188D5-5731-40D5-B580-D3C17F29215C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD8188D5-5731-40D5-B580-D3C17F29215C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706ACFE5-C40C-4ED3-82DC-4FB0F7A47D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706ACFE5-C40C-4ED3-82DC-4FB0F7A47D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706ACFE5-C40C-4ED3-82DC-4FB0F7A47D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706ACFE5-C40C-4ED3-82DC-4FB0F7A47D1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
