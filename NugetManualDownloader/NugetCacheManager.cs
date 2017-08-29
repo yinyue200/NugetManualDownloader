@@ -29,12 +29,23 @@ namespace NugetManualDownloader
             NuGet.Packaging.PackageArchiveReader packageArchiveReader = new NuGet.Packaging.PackageArchiveReader(nupkgFile);
             var pkid = packageArchiveReader.GetIdentity();
             Directory.CreateDirectory(Path.Combine(CacheFolderPath, pkid.Id));
-            var pkfilderstr = Path.Combine(CacheFolderPath, pkid.Id, pkid.Version.ToNormalizedString());
+            var pkfolderstr = Path.Combine(CacheFolderPath, pkid.Id, pkid.Version.ToNormalizedString());
 
-            Directory.CreateDirectory(pkfilderstr);
+            Directory.CreateDirectory(pkfolderstr);
             foreach(var one in NuGet.Packaging.PackageReaderExtensions.GetPackageFiles(packageArchiveReader, PackageSaveMode))
             {
-                packageArchiveReader.ExtractFile(one, Path.Combine(pkfilderstr, one), new MyLogger());
+                packageArchiveReader.ExtractFile(one, Path.Combine(pkfolderstr, one), new MyLogger());
+            }
+            var newpkgfilepath = Path.Combine(pkfolderstr, pkid.ToString() + ".nupkg");
+            using (var newpkg = File.Create(newpkgfilepath))
+            {
+                nupkgFile.CopyTo(newpkg);
+            }
+            using(var hashfile = File.Create(newpkgfilepath + ".sha512"))
+            {
+                var hash = Convert.ToBase64String(sha512value);
+                var content = System.Text.Encoding.ASCII.GetBytes(hash);
+                hashfile.Write(content, 0, content.Length);
             }
         }
     }
