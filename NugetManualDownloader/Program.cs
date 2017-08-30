@@ -15,6 +15,7 @@ namespace NugetManualDownloader
             Console.InputEncoding = System.Text.Encoding.Unicode;
 
             Console.WriteLine("Copyright © yinyue200.com 2017");
+            Console.WriteLine("https://github.com/yinyue200/NugetManualDownloader");
             if (args.Length == 0)
             {
                 Console.WriteLine("Sample:nupkgfile -c cachefolder -m Defaultv3");
