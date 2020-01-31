@@ -18,7 +18,7 @@ namespace NugetManualDownloader
             Console.WriteLine("https://github.com/yinyue200/NugetManualDownloader");
             if (args.Length == 0)
             {
-                Console.WriteLine("Sample:nupkgfile -c cachefolder -m Defaultv3");
+                Console.WriteLine("Sample:nupkgfile -c cachefolder -m Defaultv3");//NugetManualDownloader "nupkgfilepath" -m Defaultv3
                 return;
             }
             var mode = NuGet.Packaging.PackageSaveMode.Defaultv3;

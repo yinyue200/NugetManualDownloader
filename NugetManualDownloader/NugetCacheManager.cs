@@ -37,6 +37,8 @@ namespace NugetManualDownloader
                 packageArchiveReader.ExtractFile(one, Path.Combine(pkfolderstr, one), new MyLogger());
             }
             var newpkgfilepath = Path.Combine(pkfolderstr, pkid.ToString() + ".nupkg");
+
+            nupkgFile.Seek(0, SeekOrigin.Begin);
             using (var newpkg = File.Create(newpkgfilepath))
             {
                 nupkgFile.CopyTo(newpkg);
