@@ -16,7 +16,7 @@ namespace NugetManualDownloader
             CacheFolderPath = cachePath;
             PackageSaveMode = packageSaveMode;
         }
-        public void Put(Stream nupkgFile)
+        public void Write(Stream nupkgFile)
         {
             byte[] sha512value;
             Console.WriteLine("Computing Hash...");

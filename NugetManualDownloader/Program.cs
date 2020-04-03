@@ -14,7 +14,7 @@ namespace NugetManualDownloader
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.InputEncoding = System.Text.Encoding.Unicode;
 
-            Console.WriteLine("Copyright © yinyue200.com 2017");
+            Console.WriteLine("Copyright © yinyue200.com 2020");
             Console.WriteLine("https://github.com/yinyue200/NugetManualDownloader");
             if (args.Length == 0)
             {
@@ -48,7 +48,10 @@ namespace NugetManualDownloader
                 }
             }
             NugetCacheManager nugetCacheManager = new NugetCacheManager(cachefolderpath, mode);
-            nugetCacheManager.Put(File.Open(nupkgfilepath, FileMode.Open));
+            using (var stream = File.Open(nupkgfilepath, FileMode.Open))
+            {
+                nugetCacheManager.Write(stream);
+            }
         }
 
         
